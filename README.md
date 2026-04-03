@@ -21,11 +21,12 @@ It is a hands-on example of containerizing a web application, making it easy to 
 ---
 
 ## Folder Structure
+```plaintext
 project-folder/
-├── Dockerfile # Dockerfile to create Nginx container serving website
-├── index.html # Main HTML page of the static website
-├── README.md # Project documentation
-└── screenshots/ # Screenshots of Docker build and container running
+├── Dockerfile       # Dockerfile to create Nginx container serving website
+├── index.html       # Main HTML page of the static website
+├── README.md        # Project documentation
+└── screenshots/     # Screenshots of Docker build and container running
 
 ---
 
@@ -42,16 +43,24 @@ project-folder/
 ```bash
 git clone <YOUR_REPO_URL>
 cd project-folder
-Build the Docker image:
+```bash
+
+2. Build the Docker image:
+```bash
 docker build -t nginx-static-site .
-Run the container:
+```bash
+
+3. Run the container:
+```bash
 docker run -d -p 8080:80 --name my-nginx-site nginx-static-site
+```bash
 
 This will:
 
 Run the Nginx container in detached mode
 Map port 80 on your host to port 80 inside the container
 Serve your static website at http://localhost:80
+
 Verify the container:
 docker ps
 docker logs my-nginx-site
@@ -59,11 +68,20 @@ Stop and remove the container:
 docker stop my-nginx-site
 docker rm my-nginx-site
 
-Dockerfile Explanation
+## Dockerfile
 FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
 
+## Key Commands
+| Command | Purpose |
+|---------|---------|
+| `docker build -t nginx-static-site .` | Build Docker image |
+| `docker run -d -p 8080:80 --name my-nginx-site nginx-static-site` | Run container |
+| `docker ps` | List running containers |
+| `docker logs my-nginx-site` | View container logs |
+| `docker stop my-nginx-site` | Stop container |
+| `docker rm my-nginx-site` | Remove container |
 
 Author
 Pallavi Agarwal – DevOps & Containerization Enthusiast
