@@ -43,17 +43,17 @@ project-folder/
 ```bash
 git clone <YOUR_REPO_URL>
 cd project-folder
-```bash
+```
 
 2. Build the Docker image:
 ```bash
 docker build -t nginx-static-site .
-```bash
+```
 
 3. Run the container:
 ```bash
 docker run -d -p 8080:80 --name my-nginx-site nginx-static-site
-```bash
+```
 
 This will:
 
