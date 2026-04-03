@@ -27,7 +27,7 @@ project-folder/
 ├── index.html       # Main HTML page of the static website
 ├── README.md        # Project documentation
 └── screenshots/     # Screenshots of Docker build and container running
-
+```
 ---
 
 ## Technologies Used
