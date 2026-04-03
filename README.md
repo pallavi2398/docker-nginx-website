@@ -85,5 +85,5 @@ EXPOSE 80
 | `docker stop my-nginx-site` | Stop container |
 | `docker rm my-nginx-site` | Remove container |
 
-Author
+Author  
 Pallavi Agarwal – DevOps & Containerization Enthusiast
