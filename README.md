@@ -68,10 +68,12 @@ Stop and remove the container:
 docker stop my-nginx-site
 docker rm my-nginx-site
 
+## Dockerfile
 ```dockerfile
 FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
+```
 
 ## Key Commands
 | Command | Purpose |
@@ -83,5 +85,5 @@ EXPOSE 80
 | `docker stop my-nginx-site` | Stop container |
 | `docker rm my-nginx-site` | Remove container |
 
-'''Author
+Author
 Pallavi Agarwal – DevOps & Containerization Enthusiast
